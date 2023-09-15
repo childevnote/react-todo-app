@@ -1,7 +1,14 @@
 import React from 'react'
 
-export default function List({ data, provided, snapshot, handleClick, handleCompleteChange }) {
+const List = React.memo(({
+  data,
+  provided,
+  snapshot,
+  handleClick,
+  handleCompleteChange,
+}) => {
 
+  console.log("List rendered");
   return (
     <div>
       <div
@@ -20,4 +27,6 @@ export default function List({ data, provided, snapshot, handleClick, handleComp
       </div>
     </div>
   )
-}
+});
+
+export default List;

@@ -4,6 +4,7 @@ import Lists from "./components/Lists";
 import Form from "./components/Form";
 
 export default function App() {
+  console.log("App rendered");
 
   const [todoData, setTodoData] = useState(() => {
     const data = localStorage.getItem("todoData");
