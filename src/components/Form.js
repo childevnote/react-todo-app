@@ -1,25 +1,20 @@
 import React from 'react'
 
-export default function Form({value, handleSubmit, setValue,}) {
+export default function Form({ value, handleSubmit, setValue, }) {
   const handleChange = (e) => {
     setValue(e.target.value);
   }
 
   return (
-    <form style={{ display: "flex", alignItems: 'center', paddingBottom: "10px" }} onSubmit={handleSubmit}>
-      <input type="text" name="value" style={{ flex: '10', padding: '10px', margin: "5px 7px 5px 0", outline: 'none', border: '1px solid #ddd', borderRadius: "8px" }}
+    <form onSubmit={handleSubmit} className='flex pt-2 pb-2'>
+      <input className='w-full px-3 py-2 mr-4 text-gray-500 border rounded shadow' type="text" name="value" 
         placeholder="할 일을 입력하세요."
         value={value} onChange={handleChange} />
       <input
+      className='p-2 text-blue-400 border-2 border-blue-400 rounded shadow hover:bg-blue-400 hover:text-white'
         type="submit"
         value="입력"
-        className="btn"
-        style={{
-          display: "flex", width: '60px', alignItems: 'center',
-          justifyContent: 'center', height: '39px', borderRadius: '5px',
-          color: "grey", border: '1px solid #ddd', backgroundColor: '#ddd',
-          cursor: 'pointer'
-        }} />
+      />
     </form>
   )
 }
